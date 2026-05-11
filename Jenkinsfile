@@ -19,9 +19,14 @@ steps{
 sh 'mvn test'
 }
 }
+  stage('check target'){
+    steps{
+      sh 'ls -l target'
+    }
+  }
 stage('Run Application'){
 steps{
-sh 'mvn run'
+sh 'java -jar target/MyMavenApp-1.0-SNAPSHOT.jar'
 }
 }
 }
