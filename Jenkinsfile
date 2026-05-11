@@ -24,12 +24,13 @@ steps{
 sh 'mvn run'
 }
 }
+}
 post{
 success{
 echo 'succ'
 }
 failure{
-echo 'fail'}
+echo 'fail'
 }
 }
 }
